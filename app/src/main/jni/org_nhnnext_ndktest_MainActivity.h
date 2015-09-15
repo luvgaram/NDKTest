@@ -68,6 +68,13 @@ extern "C" {
  * Method:    getStringFromNative
  * Signature: ()Ljava/lang/String;
  */
+
+JNIEXPORT jstring JNICALL Java_org_nhnnext_ndktest_MainActivity_getAddedStringFromNative
+        (JNIEnv *, jobject);
+
+JNIEXPORT jstring JNICALL Java_org_nhnnext_ndktest_MainActivity_getAddedStringFromNative
+        (JNIEnv *, jobject);
+
 JNIEXPORT jstring JNICALL Java_org_nhnnext_ndktest_MainActivity_getAddedStringFromNative
   (JNIEnv *, jobject);
 

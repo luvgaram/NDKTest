@@ -12,9 +12,10 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("NDKTest");
     }
 
-//    public native String getStringFromNative();
-
+    public native String getStringFromNativeEJ();
+    public native String getStringFromNativeNDK();
     public native String getAddedStringFromNative();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // TextView에 Native Method를 호출한 결과를 표시한다.
-        TextView view = (TextView) findViewById(R.id.textView);
-        view.setText(getAddedStringFromNative());
+
+        TextView view1 = (TextView) findViewById(R.id.textView1);
+        TextView view2 = (TextView) findViewById(R.id.textView2);
+        TextView view3 = (TextView) findViewById(R.id.textView3);
+
+        view1.setText(getStringFromNativeEJ());
+        view2.setText(getStringFromNativeNDK());
+        view3.setText(getAddedStringFromNative());
     }
 
     @Override
